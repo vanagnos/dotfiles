@@ -44,4 +44,4 @@ call plug#end()
 
 source $HOME/.config/nvim/plug-config/coc.vim 
 highlight CocFloating ctermbg=231 "gkri    
-highlight CocFloating ctermfg=247 "pio gkri 
+highlight CocFloating ctermfg=247 "pio gkri1
