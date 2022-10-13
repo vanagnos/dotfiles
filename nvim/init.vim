@@ -58,3 +58,14 @@ highlight CocFloating ctermfg=247 "pio gkri
 set makeprg="mvn clean install"
 
 au BufWritePost *.java silent! !ctags --languages=java -R -f ~/tags /local/zavasan/git/5g_proto &
+
+lua local capabilities = vim.lsp.protocol.make_client_capabilities()
+lua local opts = { noremap=true, silent=true }
+
+" this one works
+lua vim.api.nvim_set_keymap('n','<C-]>', '<cmd>lua vim.lsp.buf.definition()<CR>', { silent = true })
+
+lua require'lspconfig'.jdtls.setup{} 
+
+
+"lua capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
