@@ -5,11 +5,11 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 
--- options.lua containig vim set options
-require("options")
+-- set.lua containig vim set options
+require("set")
 
--- keymaps.lua containing keymaps
-require("keymaps")
+-- remaps.lua containing keymaps
+require("remap")
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
