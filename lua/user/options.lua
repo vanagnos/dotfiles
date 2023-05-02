@@ -1,7 +1,8 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
-vim.o.guicursor=''
+vim.o.mouse="icr"
+vim.o.guicursor=""
 --not sure if needed since i have plugins installed for this
 vim.o.tabstop=4
 vim.o.shiftwidth=4
@@ -48,7 +49,7 @@ vim.o.smartcase = true
 vim.wo.signcolumn = 'yes'
 
 -- Decrease update time
-vim.o.updatetime = 250
+vim.o.updatetime = 50
 vim.o.timeout = true
 vim.o.timeoutlen = 300
 
@@ -57,3 +58,13 @@ vim.o.completeopt = 'menuone,noselect'
 
 -- NOTE: You should make sure your terminal supports this
 vim.o.termguicolors = true
+
+-- remember last cursor position
+if vim.fn.has("autocmd") == 1 then
+  vim.cmd [[
+    augroup vimrc
+      autocmd!
+      autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | execute "normal! g`\"" | endif
+    augroup END
+  ]]
+end
