@@ -10,5 +10,7 @@
     recurse = true
 [credential]
     helper = store
+[merge]
+    tool = vimdiff
 
 
