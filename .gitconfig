@@ -1,0 +1,14 @@
+[user]
+    name = Vasilis Anagnostopoulos
+    email = vanagnos1@gmail.com
+[alias]
+    #sc-push = "!git push origin HEAD:refs/for/$(git branch --show-current)"
+    co = checkout
+    st = status
+    pull = !git pull --recurse-submodules
+[submodule]
+    recurse = true
+[credential]
+    helper = store
+
+
