@@ -33,3 +33,11 @@ vim.cmd [[
 --   autocmd!
 --   autocmd BufWritePre * lua vim.lsp.buf.formatting()
 -- augroup end
+--
+
+vim.cmd [[
+  augroup _yaml_comment_identation
+    autocmd!
+    autocmd FileType yaml,yaml.ansible setlocal indentkeys-=0#
+    augroup end
+]]
