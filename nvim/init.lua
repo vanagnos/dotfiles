@@ -1,10 +1,4 @@
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.colorscheme"
-require "user.telescope"
---require "user.cmp"
-require "user.lsp"
---require "user.treesitter"
-require "user.whichkey"
-require "user.autocommands"
+if not vim.g.vscode then
+	vim.loader.enable()
+	require("core")
+end
