@@ -5,4 +5,5 @@ set completion-ignore-case On
  
 $if mode=vi
 set keymap vi-command
+set keyseq-timeout 0
 $endif
