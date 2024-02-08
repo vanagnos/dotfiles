@@ -44,3 +44,10 @@ export EDITOR=vim
 bind -m vi-command 'Control-l: clear-screen'
 bind -m vi-insert 'Control-l: clear-screen'
 
+# For Debian/Ubuntu systems
+# On Redhat based systems this is the default behaviour (I think), so leave this comment out.
+# set this at the end of bashrc
+# unbind the werase character (whih is the C-w) then bind the C-w.
+# use this binding to make C-w delete word with whitespace as a delimiter.
+stty werase undef
+bind '"\C-w": unix-word-rubout'
