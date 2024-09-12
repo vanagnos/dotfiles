@@ -52,10 +52,11 @@ bind -m vi-insert 'Control-l: clear-screen'
 stty werase undef
 bind '"\C-w": unix-word-rubout'
 
-
 # Bash history configuration
-# By default, history is written to .history when the terminal session is closed. Force write immediately after executing a command.
-PROMPT_COMMAND='history -a; $PROMPT_COMMAND'
+# By default, history is written to .history when the terminal session is closed. Force writing immediately after executing a command.
+PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
+shopt -s histappend
+
 # Unlimited history. If `-1` doesn't work try leaving it unset, like this `HISTISZE= `
 # number of history entries stored in memory
 HISTSIZE=-1
@@ -65,3 +66,5 @@ HISTFILESIZE=-1
 # Change the file location because certain bash sessions truncate .bash_history file upon close.
 # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
 # export HISTFILE=~/.bash_eternal_history
+
+
