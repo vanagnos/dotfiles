@@ -54,7 +54,7 @@ bind '"\C-w": unix-word-rubout'
 
 # Bash history configuration
 # By default, history is written to .history when the terminal session is closed. Force writing immediately after executing a command.
-PROMPT_COMMAND="history -a; history -r; $PROMPT_COMMAND"
+PROMPT_COMMAND="history -a; $PROMPT_COMMAND" #history -r; $PROMPT_COMMAND"
 shopt -s histappend
 
 # Unlimited history. If `-1` doesn't work try leaving it unset, like this `HISTISZE= `
