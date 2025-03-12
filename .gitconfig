@@ -5,6 +5,7 @@
     #sc-push = "!git push origin HEAD:refs/for/$(git branch --show-current)"
     co = checkout
     st = status
+	di = diff
     pull = !git pull --recurse-submodules
 [submodule]
     recurse = true
@@ -13,4 +14,6 @@
 [core]
     editor = vim
     pager = less -i
+[merge]
+    tool = vimdiff
 
